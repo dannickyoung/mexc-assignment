@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useT } from "@/components/deck/LanguageContext";
 
 export interface Section {
   id: string;
@@ -10,6 +11,20 @@ export interface Section {
 
 export function ReportSidebar({ sections }: { sections: Section[] }) {
   const [active, setActive] = useState(sections[0]?.id ?? "");
+  const t = useT({
+    en: {
+      back: "← BACK",
+      eyebrow: "BRAND REPORT",
+      title: "Xanthus",
+      subtitle: "MEXC AI Brand Upgrade, 2026",
+    },
+    zh: {
+      back: "← 返回",
+      eyebrow: "品牌报告",
+      title: "Xanthus",
+      subtitle: "MEXC AI 品牌升级, 2026",
+    },
+  });
 
   useEffect(() => {
     const handler = () => {
@@ -33,19 +48,17 @@ export function ReportSidebar({ sections }: { sections: Section[] }) {
         href="/"
         className="block font-mono text-[10px] tracking-[0.3em] text-white/50 transition-colors hover:text-white"
       >
-        ← BACK
+        {t.back}
       </a>
 
       <div className="mt-10">
         <div className="font-mono text-[10px] tracking-[0.3em] text-xanthus-flame-light">
-          BRAND REPORT
+          {t.eyebrow}
         </div>
         <h1 className="mt-2 text-2xl font-semibold leading-tight text-white">
-          Xanthus
+          {t.title}
         </h1>
-        <p className="mt-1 text-xs text-white/55">
-          MEXC AI Brand Upgrade, 2026
-        </p>
+        <p className="mt-1 text-xs text-white/55">{t.subtitle}</p>
       </div>
 
       <nav className="mt-10 flex flex-col gap-0.5">
