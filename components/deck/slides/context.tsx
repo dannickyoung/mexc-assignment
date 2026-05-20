@@ -60,7 +60,7 @@ export function ContextSlide() {
 function SplashMockup({ variant, t }: { variant: "before" | "after"; t: { beforeLabel: string; beforeDesc: string; afterLabel: string; afterDesc: string; tagline: string; taglineSub: string; input: string; askText: string; askSub: string } }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="relative flex flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#0A0A0F]" style={{ width: 250, height: 500 }}>
+      <div className="relative flex flex-col overflow-hidden rounded-[24px] border border-white/10 bg-black" style={{ width: 250, height: 500 }}>
         <div className="flex items-center justify-between px-4 pt-3 pb-1.5 font-mono text-[9px] text-white/70">
           <span>22:59</span>
           <span className="inline-block h-1.5 w-3 rounded-sm bg-white/70" />

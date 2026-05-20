@@ -48,7 +48,7 @@ export function AIChatMockup({ state, scale = 1 }: AIChatMockupProps) {
   return (
     <div style={{ transform: `scale(${scale})`, transformOrigin: "top center" }}>
       <div
-        className="relative flex flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#0A0A0F]"
+        className="relative flex flex-col overflow-hidden rounded-[24px] border border-white/10 bg-black"
         style={{ width: 240, height: 480 }}
       >
         {/* Status bar */}
