@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Xanthus × MEXC AI Brand
 
-## Getting Started
+Take-home brand identity assignment for MEXC's AI sub-brand.
 
-First, run the development server:
+**Concept:** Xanthus — Achilles' immortal divine horse from the *Iliad*, granted the gift of prophetic speech to counsel his master. The original "AI advisor" in classical mythology. Greek Ξάνθος meaning *golden.*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**Casual form:** "X" (e.g., *"Hey X, what's BTC doing?"*)
+
+## Stack
+
+- **Next.js 15** (App Router) + **TypeScript**
+- **Tailwind CSS 4** — styling
+- **Framer Motion** — IP character state animations
+- **Lottie React** — After Effects export pipeline
+- **Geist Sans / Mono** (Next.js default) + **Cormorant** (Google Font, classical serif placeholder for the Xanthus wordmark)
+
+## Repo Structure
+
+```
+/app                    Next.js routes — live prototype pages
+/components/brand       Xanthus mark, IP character, motion components
+/lib                    Brand tokens (single source of truth for colors/fonts/motion)
+/public/brand           Logo SVGs, brand asset exports
+/public/motion          Lottie JSONs, looping MP4s
+/design                 Source design files
+  /figma                Working .fig files (gitignored if heavy)
+  /after-effects        .aep projects
+  /exports              PNG/PDF exports
+/motion                 Motion source assets
+  /lottie               JSON exports
+  /video                MP4 / MOV renders
+/research               Competitive research, mood board, screenshots
+  /competitors          Aurora, Amy, Kia, GetAgent — competitor AI screens
+  /moodboard            Visual references
+/deck                   Final PDF deliverable
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Brand Tokens
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Canonical values in `lib/brand-tokens.ts`. Import from there — never hardcode hexes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```ts
+import { colors, gradients, typography, motion } from "@/lib/brand-tokens";
+```
 
-## Learn More
+**Color philosophy:** MEXC owns blue (Blue Ribbon `#1463FE` — the platform). Xanthus owns flame (the spark of prophecy, intelligence in motion). Always paired on every surface — flame in isolation disconnects the sub-brand from the master.
 
-To learn more about Next.js, take a look at the following resources:
+**Why flame, not gold:** Gold is wealth at rest. Fire is intelligence in motion. The moment Xanthus spoke prophecy to Achilles was a moment of *divine fire* — the spark of insight igniting, the Promethean flame of reason. An AI thinking is active, not static. The color story should match.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**MEXC's official palette:**
+- Blue Ribbon `#1463FE` — primary brand blue
+- Shakespeare `#509AD0` — secondary, softer blue
+- Black `#000000`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Development
 
-## Deploy on Vercel
+```bash
+npm run dev          # Local dev (http://localhost:3000)
+npm run build        # Production build
+npm run lint         # ESLint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deliverables Checklist
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Brand analysis report (PDF, `/deck`)
+- [ ] AI brand IP extension — Idle, Generating, Output states
+- [ ] Logo system — construction, variations, sizes
+- [ ] Color system — full palette with usage rules
+- [ ] Typography system
+- [ ] Application mockups — splash, chat header, Services tile
+- [ ] Motion preview — at minimum the Idle state (Lottie or MP4)
+- [ ] Bilingual deck (中文 + English)
+
+## Status
+
+Naming locked: **Xanthus** (formal) / **X** (casual)
+Visual system: in progress
+Motion: pending

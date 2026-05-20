@@ -39,3 +39,31 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design source files (heavy binaries — keep exports, not sources)
+design/figma/*.fig
+design/after-effects/**/*.aep
+design/after-effects/**/*.aepx
+**/*.psd
+**/*.ai
+**/*.sketch
+
+# motion source files (keep Lottie JSON + final MP4, not project files)
+motion/**/*.aep
+motion/**/*.aepx
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# research screenshots (preview images, not source)
+/research/
+
+# design source files (large binaries)
+/design/
+
+# motion source files
+/motion/
+
+# deck PDFs
+/deck/
