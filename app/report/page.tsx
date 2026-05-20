@@ -321,10 +321,10 @@ const enContent = {
     p2: "Helvetica Neue throughout the system, matching MEXC's master brand sans family. Playfair Display Italic is used sparingly for inline keyword emphasis, providing classical contrast against the modernist sans. Geist Mono is used for labels, metadata, and code spec annotations.",
     h4: "Motion principles",
     motionRules: [
-      "Drawn, not animated. Every motion should feel like a thread being drawn by an unseen hand",
-      "Eased, never linear. Cubic bezier (0.16, 1, 0.3, 1) for entrance, (0.4, 0, 0.2, 1) for transitions",
-      "One thing at a time. Never parallel animations competing for attention",
-      "Subtle by default. Motion is a brand signal, not a performance",
+      "Organic, never mechanical. Every movement should feel alive, like the brand has its own pulse.",
+      "Smooth, never abrupt. Animations ease in and out, never jolt the eye.",
+      "One thing at a time. Never parallel animations competing for attention.",
+      "Subtle by default. Motion is a brand signal, not a performance.",
     ],
   },
   ip: {
@@ -492,10 +492,10 @@ const zhContent: typeof enContent = {
     p2: "整个系统使用 Helvetica Neue，与 MEXC 主品牌的无衬线字体家族相匹配。Playfair Display Italic 谨慎用于内联关键词强调，提供与现代无衬线字体的古典对比。Geist Mono 用于标签、元数据和规格注释。",
     h4: "动效原则",
     motionRules: [
-      "是「画」出来的，不是「动」出来的。每一个动作都该像一根线被一只看不见的手拉出来",
-      "总是缓动，永不线性。入场用 cubic bezier (0.16, 1, 0.3, 1)，过渡用 (0.4, 0, 0.2, 1)",
-      "一次只做一件事。永远不让两个动画同时争夺注意力",
-      "默认克制。动效是品牌信号，不是表演",
+      "有机，而非机械。每个动作都该有生命，像品牌自带脉搏。",
+      "流畅，而非突兀。动效缓入缓出，从不让视线被惊吓。",
+      "一次只做一件事。永远不让两个动画同时争夺注意力。",
+      "默认克制。动效是品牌信号，不是表演。",
     ],
   },
   ip: {
