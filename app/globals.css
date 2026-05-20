@@ -111,6 +111,13 @@ body {
     font-weight: 500 !important;
     color: #1463fe !important;
   }
+  .text-keyword-white,
+  .text-keyword-white * {
+    font-family: var(--font-playfair), "Playfair Display", Georgia, serif !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+  }
 }
 
 :root {

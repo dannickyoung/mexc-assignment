@@ -91,7 +91,7 @@ export function NameSlide() {
             </div>
             <p className="mt-3 text-sm leading-relaxed text-white/90">
               {card.pre}
-              <span className="text-keyword-blue">{card.keyword}</span>
+              <span className="text-keyword-white">{card.keyword}</span>
               {card.post}
             </p>
           </div>
