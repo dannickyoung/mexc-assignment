@@ -330,9 +330,9 @@ const enContent = {
   ip: {
     intro: "The brief required three states for the AI IP: idle, generating, and output. Xanthus delivers all three using the same two strokes that build the mark, so the character never feels like a separate asset. The same visual identity moves through three personalities.",
     states: [
-      { num: "01", label: "IDLE", zh: "待机", body: "The mark breathing. Slow scale pulse. Alive, waiting, attentive." },
-      { num: "02", label: "GENERATING", zh: "生成中", body: "Two strokes part and rejoin in oscillation. Counsel forming. Echoes the construction story of the mark itself." },
-      { num: "03", label: "OUTPUT", zh: "结果输出", body: "Decisive pulse outward. A radial glow ring expands and fades as the answer arrives." },
+      { num: "01", label: "IDLE", body: "The mark breathing. Slow scale pulse. Alive, waiting, attentive." },
+      { num: "02", label: "GENERATING", body: "Two strokes part and rejoin in oscillation. Counsel forming. Echoes the construction story of the mark itself." },
+      { num: "03", label: "OUTPUT", body: "Decisive pulse outward. A radial glow ring expands and fades as the answer arrives." },
     ],
     close: "In the app, the same character is the chat avatar, the loading indicator, and the response icon. One IP, three behaviors, every surface.",
   },
@@ -343,7 +343,6 @@ const enContent = {
       "A real name with a real story. Not a descriptor. Not a token brand. A name worth saying.",
       "A constructed mark, built from two strokes that meet. Geometry instead of an arrow plus a star.",
       "A signature motion. Two strokes converging, then a breathing state, then a pulse. The same character moves through every surface.",
-      "A bilingual system. EN and ZH, full toggle, no language mixing. Reads global out of the box.",
       "Restraint. Two colors, two typefaces, one IP. Premium brands earn attention by what they leave out.",
     ],
     h2: "What it does for MEXC",
@@ -501,9 +500,9 @@ const zhContent: typeof enContent = {
   ip: {
     intro: "简报要求 AI IP 有三种状态：待机、生成中、结果输出。Xanthus 用构建标志的同一对笔画交付了所有三种状态，因此角色从不像一个独立资产。同一个视觉身份穿过三种性格。",
     states: [
-      { num: "01", label: "IDLE", zh: "待机", body: "标志在呼吸。缓慢的尺度脉动。鲜活、等待、专注。" },
-      { num: "02", label: "GENERATING", zh: "生成中", body: "两笔分离再合，建议正在凝聚。回响标志本身的构建故事。" },
-      { num: "03", label: "OUTPUT", zh: "结果输出", body: "向外的一次决定性脉动。一圈径向光晕扩展再消散，回答抵达。" },
+      { num: "01", label: "待机", body: "标志在呼吸。缓慢的尺度脉动。鲜活、等待、专注。" },
+      { num: "02", label: "生成中", body: "两笔分离再合，建议正在凝聚。回响标志本身的构建故事。" },
+      { num: "03", label: "结果输出", body: "向外的一次决定性脉动。一圈径向光晕扩展再消散，回答抵达。" },
     ],
     close: "在应用里，同一个角色是聊天头像、加载指示、回应图标。一个 IP、三种行为、每一个界面。",
   },
@@ -514,7 +513,6 @@ const zhContent: typeof enContent = {
       "一个真实的名字，配一个真实的故事。不是描述符。不是代币品牌。一个值得呼唤的名字。",
       "一个被构造的标志，由两笔交汇而成。是几何，不是「箭头加星」。",
       "一个标志性动效。两笔汇合、然后呼吸、然后脉动。同一个角色穿过每一个界面。",
-      "一个双语系统。EN 和 ZH，完整切换，不混杂。开箱即读全球感。",
       "克制。两种颜色、两种字体、一个 IP。高端品牌靠它们留下的东西赢得注意。",
     ],
     h2: "对 MEXC 的意义",
@@ -745,7 +743,7 @@ function Bullets({ items }: { items: string[] }) {
 function StatesGrid({
   items,
 }: {
-  items: { num: string; label: string; zh: string; body: string }[];
+  items: { num: string; label: string; body: string }[];
 }) {
   return (
     <div className="my-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -758,7 +756,6 @@ function StatesGrid({
             {it.num}
           </div>
           <div className="mt-2 text-sm font-semibold text-white">{it.label}</div>
-          <div className="text-[11px] text-white/45">{it.zh}</div>
           <p className="mt-2 text-[12px] leading-relaxed text-white/75">{it.body}</p>
         </div>
       ))}
