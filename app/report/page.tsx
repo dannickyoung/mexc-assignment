@@ -301,7 +301,7 @@ const enContent = {
     p5: "Context already does the work. Xanthus lives inside MEXC-AI as a surface. Users meeting Xanthus there will know it is an AI. The naming convention reinforces this:",
     bullets: [
       "Formal brand wordmark: XANTHUS",
-      "Conversational form in product: \"Hey X\" or \"Ask Xanthus\"",
+      "Conversational form in product: \"Ask Xanthus\"",
       "Surface label inside MEXC: MEXC-AI · Xanthus",
       "External announcement: \"MEXC launches Xanthus\"",
     ],
@@ -471,7 +471,7 @@ const zhContent: typeof enContent = {
     p5: "语境已经在做这件事。Xanthus 作为一个界面存在于 MEXC-AI 内部。在那里遇见 Xanthus 的用户会知道它是一个 AI。命名约定强化了这一点：",
     bullets: [
       "正式品牌字标：XANTHUS",
-      "产品内对话形式：「Hey X」或「Ask Xanthus」",
+      "产品内对话形式：「Ask Xanthus」",
       "MEXC 内界面标签：MEXC-AI · Xanthus",
       "对外发布：「MEXC 发布 Xanthus」",
     ],
