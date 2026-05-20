@@ -69,14 +69,25 @@ function SplashMockup({ variant, t }: { variant: "before" | "after"; t: { before
           <span className="text-white/50 text-xs">←</span>
           <span className="text-[12px] font-medium tracking-wide text-white">MEXC-AI</span>
         </div>
-        <div className="flex flex-1 flex-col items-center justify-center px-5">
-          {variant === "before" ? <PlaceholderMark /> : <XanthusMark size={60} />}
-          <div className="mt-5 text-center text-[12px] font-medium text-white">
-            {variant === "before" ? t.tagline : t.askText}
-          </div>
-          <div className="mt-1 text-center text-[10px] text-white/40">
-            {variant === "before" ? t.taglineSub : t.askSub}
-          </div>
+        <div className="flex flex-1 flex-col items-center justify-center px-3">
+          {variant === "before" ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src="/brand/current-mexc-ai.png"
+              alt="Current MEXC-AI splash screen"
+              className="w-full"
+            />
+          ) : (
+            <>
+              <XanthusMark size={60} />
+              <div className="mt-5 text-center text-[12px] font-medium text-white">
+                {t.askText}
+              </div>
+              <div className="mt-1 text-center text-[10px] text-white/40">
+                {t.askSub}
+              </div>
+            </>
+          )}
         </div>
         <div className="border-t border-white/5 px-3 py-2.5">
           <div className="flex items-center gap-2 rounded-full bg-white/5 px-3 py-2">
@@ -96,11 +107,3 @@ function SplashMockup({ variant, t }: { variant: "before" | "after"; t: { before
   );
 }
 
-function PlaceholderMark() {
-  return (
-    <svg width="60" height="60" viewBox="0 0 80 80" fill="none">
-      <path d="M20 60 L40 20 L60 60 M28 45 L52 45" stroke="#FFFFFF" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M55 25 L65 15 M60 15 L65 15 L65 20" stroke="#FFFFFF" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
